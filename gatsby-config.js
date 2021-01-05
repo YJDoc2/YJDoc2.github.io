@@ -7,9 +7,9 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `SiteName`,
+    title: `YJDoc2`,
     description: `A minimalistic resume style Gatsby portfolio.`,
-    author: `@gmlunesa`,
+    author: `@YJDoc2`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -25,8 +25,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `SiteName`,
-        short_name: `SiteName`,
+        name: `YJDoc2`,
+        short_name: `YJDoc2`,
         start_url: `/`,
         background_color: `#1b1c1e`,
         theme_color: `#1b1c1e`,

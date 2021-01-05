@@ -3,11 +3,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope, faArrowUp } from "@fortawesome/free-solid-svg-icons"
-import {
-  faTwitter,
-  faGithub,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons"
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 
 import { Link } from "react-scroll"
 
@@ -47,7 +43,7 @@ export default class Footer extends Component {
                     </li>
                     <li className="list-inline-item mr-4">
                       <a
-                        href="mailto:emailName@gmail.com"
+                        href="mailto:yjdoc2@gmail.com"
                         target="_blank"
                         rel="noreferrer"
                         alt="email link"
@@ -57,7 +53,7 @@ export default class Footer extends Component {
                     </li>
                     <li className="list-inline-item mr-4">
                       <a
-                        href="https://github.com/githubName"
+                        href="https://github.com/YJDoc2"
                         target="_blank"
                         rel="noreferrer"
                         alt="github link"
@@ -67,22 +63,12 @@ export default class Footer extends Component {
                     </li>
                     <li className="list-inline-item mr-4">
                       <a
-                        href="https://linkedin.com/linkedInName"
+                        href="https://www.linkedin.com/in/yashodhan-joshi-b3172b19a/"
                         target="_blank"
                         rel="noreferrer"
                         alt="linkedin link"
                       >
                         <FontAwesomeIcon icon={faLinkedin} />
-                      </a>
-                    </li>
-                    <li className="list-inline-item">
-                      <a
-                        href="https://twitter.com/twitterName"
-                        target="_blank"
-                        rel="noreferrer"
-                        alt="twitter link"
-                      >
-                        <FontAwesomeIcon icon={faTwitter} />
                       </a>
                     </li>
                   </ul>

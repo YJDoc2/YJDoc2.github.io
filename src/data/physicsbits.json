@@ -1,0 +1,25 @@
+[
+  {
+    "quote": "Noether's Theorem mathematically proves that For any symmetry in physical laws, there exists a corresponding conservation law in the system.",
+    "links": ["https://youtu.be/Rqfj7n5aSwY","https://youtu.be/CxlHLqJ9I0A"]
+  },
+  {
+    "quote": "Einstien's Theory Of General Relativity says that gravity is not a force, all objects follow their natural path through space-time, and force that changes that path is what we experience as Gravity.",
+    "links": ["https://youtu.be/0jjFjC30-4A"]
+  },{
+    "quote": "Einstien's Theory Of General Relativity says the force we feel is not the Earth's gravity that is pulling, but the force from the floor stopping us from falling.",
+    "links": ["https://youtu.be/0jjFjC30-4A"]
+  },{
+    "quote": "The Principle of Least action shows that a particle travelling between two points will always take the path which will correspond to smallest sum of energy throughout the path.",
+    "links": ["https://www.feynmanlectures.caltech.edu/II_19.html","https://youtu.be/dPxhTiiq-1A","https://youtu.be/2nrncgGzOAQ"]
+  },{
+    "quote": "When considered with Quantum Mechanics, Priciple of Least action can imply that a particle actually 'smells' path of least action, analogous to diffraction.",
+    "links": ["https://www.feynmanlectures.caltech.edu/II_19.html","https://youtu.be/dPxhTiiq-1A","https://youtu.be/2nrncgGzOAQ"]
+  },{
+    "quote": "Theory of Quantum Electrodynamics has been tested to the accuracy of measuring diameter of Earth with error of a fifth of human hair.",
+    "links":["https://youtu.be/I7OdEfGOX7k","https://youtu.be/hHTWBc14-mk"]
+  },{
+    "quote": "Gravity is the weakest force, yet it holds galaxies together : A small magnet can keep a pin stuck to it, even when whole Earth is pulling down on the pin.",
+    "links":[]
+  }
+]

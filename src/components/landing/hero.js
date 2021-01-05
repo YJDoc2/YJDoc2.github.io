@@ -3,7 +3,8 @@ import React from "react"
 import Image from "../image"
 import Links from "../links"
 
-import { Link } from "react-scroll"
+import { Link } from "gatsby"
+import { Link as ScrollLink } from "react-scroll"
 
 export default function Hero() {
   return (
@@ -18,18 +19,26 @@ export default function Hero() {
                   👋
                 </span>
               </h1>
-              <h1>Hi. I'm Umiko</h1>
+              <h1>Hello, I'm Yashodhan Joshi</h1>
               <p>
-                I work as a software developer at a game company. Will you be my
-                airsoft buddy?
+                I am Learning about computers,currently interested in Operating
+                Systems and System Programming.
+                <br />
+                Also, I love Physics .
               </p>
-              <Link
-                to="content"
-                className="main-button btn btn-primary shadow-sm"
-                smooth={true}
-              >
-                Get to know me
-              </Link>
+              <div>
+                <ScrollLink
+                  to="content"
+                  className="main-button btn btn-primary shadow-sm"
+                  smooth={true}
+                >
+                  Know a bit more
+                </ScrollLink>
+                {"  "}
+                <Link to="projects" className="main-button btn btn-primary">
+                  See My Projects
+                </Link>
+              </div>
             </div>
           </div>
           {/* - Hero section: Left side */}
@@ -41,12 +50,13 @@ export default function Hero() {
                 <div className="card-body">
                   <div className="icon">
                     <Image
-                      fileName="photo.jpg"
+                      fileName="icon.png"
                       style={{ width: "5rem", height: "5rem" }}
                       alt="Hero Icon"
                     />
                   </div>
-                  <h3 className="card-title">@umikokommando</h3>
+
+                  <h3 className="card-title">@YJDoc2</h3>
                   <h4>
                     <span
                       className="mr-1"
@@ -56,13 +66,13 @@ export default function Hero() {
                     >
                       📍
                     </span>
-                    Tokyo
+                    India
                     <br />
                   </h4>
                   <p className="card-text">
-                    full-time software dev,
+                    Curious Student Interested in
                     <br />
-                    airsoft enthusiast
+                    Physics and Computers
                   </p>
                   <Links />
                 </div>

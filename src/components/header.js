@@ -1,19 +1,10 @@
 import { Link } from "gatsby"
 import React from "react"
 
-// import Toggler from "./toggler"
-
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
 
-// import { Link } from "gatsby"
-// import PropTypes from "prop-types"
-// import React from "react"
-
-// import { Link } from "gatsby"
-// import PropTypes from "prop-types"
 import { Component } from "react"
 import { StaticQuery, graphql } from "gatsby"
-// import config from '../../../config';
 
 export default class Header extends Component {
   constructor(props) {
@@ -79,6 +70,11 @@ export default class Header extends Component {
                     <li className="nav-item my-auto ml-2">
                       <Link className="nav-link" to="/contact">
                         Contact
+                      </Link>
+                    </li>
+                    <li className="nav-item my-auto ml-2">
+                      <Link className="nav-link" to="/projects">
+                        Projects
                       </Link>
                     </li>
                     <li className="nav-item my-auto ml-2">
