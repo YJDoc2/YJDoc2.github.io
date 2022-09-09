@@ -1,97 +1,179 @@
-[{
-  "project": "8086 Commandline Emulator",
-  "language": ["Rust"],
-  "stack":["Parser"],
-  "description": "An Intel 8086 Emulator which can run the x86 assembly programs supported by 8086. It also has support for printing the state of the machine.",
-  "links": ["https://github.com/YJDoc2/8086-Emulator/"]
-  },{
+[
+  {
+    "project": "JPN-prompt-generator",
+    "language": ["HTML", "JavaScript"],
+    "stack": [],
+    "description": "A Simple web app to generate word and grammar prompts for japanese learners.",
+    "links": [
+      "https://github.com/YJDoc2/pcb-rs/",
+      "https://github.com/YJDoc2/jpn-prompt-generator"
+    ]
+  },
+  {
+    "project": "Pcb-rs",
+    "language": ["Rust"],
+    "stack": ["Parser"],
+    "description": "A library to easily wite Software Emulated Hardware.",
+    "links": [
+      "https://github.com/YJDoc2/pcb-rs/",
+      "https://github.com/YJDoc2/pcb-rs-examples/",
+      "https://yjdoc2.github.io/pcb-rs-examples/"
+    ]
+  },
+  {
+    "project": "Bytecode",
+    "language": ["Rust"],
+    "stack": ["Parser"],
+    "description": "A Rust proc-macro to derive bytecode for enums and implement functions for conversion to-and-from it.",
+    "links": ["https://github.com/YJDoc2/Bytecode/"]
+  },
+  {
+    "project": "MapReduce-With-Docker",
+    "language": ["Rust"],
+    "stack": ["Docker", "Docker-Compose"],
+    "description": "This is a proof-of-concept implementation of Google's MapReduce Algorithm.",
+    "links": ["https://github.com/YJDoc2/MapReduce-with-Docker/"]
+  },
+  {
+    "project": "Network-Simulator",
+    "language": ["HTML", "JavaScript"],
+    "stack": ["Svelte", "NodeJS"],
+    "description": "A simple in browser network simulator, which can be used to visualize network graph and run specific logic code on packets.",
+    "links": [
+      "https://github.com/YJDoc2/Network-simulator/",
+      "https://yjdoc2.github.io/Network-Simulator/"
+    ]
+  },
+  {
+    "project": "Shnippet",
+    "language": ["Rust"],
+    "stack": [],
+    "description": "A simple commandline snippet manager",
+    "links": ["https://github.com/YJDoc2/shnippet/"]
+  },
+  {
+    "project": "youki",
+    "language": ["Rust"],
+    "stack": ["Docker"],
+    "description": "An open source project I contributed to. This is a low level container runtime implementation in Rust",
+    "links": ["https://github.com/containers/youki"]
+  },
+  {
+    "project": "8086 Commandline Emulator",
+    "language": ["Rust"],
+    "stack": ["Parser"],
+    "description": "An Intel 8086 Emulator which can run the x86 assembly programs supported by 8086. It also has support for printing the state of the machine.",
+    "links": ["https://github.com/YJDoc2/8086-Emulator/"]
+  },
+  {
     "project": "8086 Web Emulator",
-    "language": ["Rust","JavaScript","WASM"],
-    "stack":["Parser","React","Neural Networks"],
+    "language": ["Rust", "JavaScript", "WASM"],
+    "stack": ["Parser", "React", "Neural Networks"],
     "description": "An Intel 8086 Emulator which can run the x86 assembly programs supported by 8086. It Provides Web GUI that shows state of flags, registers and memory.",
-    "links": ["https://yjdoc2.github.io/8086-emulator-web/","https://github.com/YJDoc2/8086-Emulator-Web/"]
-  },{
-  "project": "SPA Portal",
-  "language": ["C","JavaScript","Python"],
-  "stack":["Express","Flask","Docker"],
-  "description": "An online C Examination Portal, where I worked on th ecode compilation process in backend, as well as containerized it, and deployed on GCP",
-  "links": []
-  },{
-  "project": "Plagiarism Detector",
-  "language": ["C","Rust"],
-  "stack":["GNU Make","Parser","Flex"],
-  "description": "A simpler Code PLagiarism detector made using Flex and Rust.",
-  "links": ["https://github.com/YJDoc2/Plagiarism-Detector"]
-  },{
+    "links": [
+      "https://yjdoc2.github.io/8086-emulator-web/",
+      "https://github.com/YJDoc2/8086-Emulator-Web/"
+    ]
+  },
+  {
+    "project": "SPA Portal",
+    "language": ["C", "JavaScript", "Python"],
+    "stack": ["Express", "Flask", "Docker"],
+    "description": "An online C Examination Portal, where I worked on th code compilation process in backend, as well as containerized it, and deployed on GCP",
+    "links": []
+  },
+  {
+    "project": "Plagiarism Detector",
+    "language": ["C", "Rust"],
+    "stack": ["GNU Make", "Parser", "Flex"],
+    "description": "A simpler Code PLagiarism detector made using Flex and Rust.",
+    "links": ["https://github.com/YJDoc2/Plagiarism-Detector"]
+  },
+  {
     "project": "Unicode Master’s Portal Project",
     "language": ["JavaScript"],
-    "stack":["NodeJS","Express","MongoDB","React"],
+    "stack": ["NodeJS", "Express", "MongoDB", "React"],
     "description": "A Web Portal to connect passed out seniors who opted for a Master's degree and Juniors Who are currently studying for their Bachelor's degree. This gives facility of chats, forum, Notification System, and to follow user and university accounts.",
     "links": ["https://github.com/djunicode/masters-information-portal/"]
-  },{
+  },
+  {
     "project": "Rust Neural Network",
     "language": ["Rust"],
-    "stack":["Neural Networks"],
+    "stack": ["Neural Networks"],
     "description": "Implemented a basic Neural Network in Rust from scratch and trained over MNIST data, accuracy up to 95-96%.",
     "links": ["https://github.com/YJDoc2/Rust-NN"]
-  },{
+  },
+  {
     "project": "Rust NN Web",
-    "language": ["Rust","WASM","HTML","JavaScript"],
-    "stack":["Express","Neural Networks"],
+    "language": ["Rust", "WASM", "HTML", "JavaScript"],
+    "stack": ["Express", "Neural Networks"],
     "description": "Compiled the NN in Rust to WASM and implemented web interface to give input to the NN and predict the digits. This all is done completely in frontend, withour requirement of sending data to backend.",
     "links": ["https://github.com/YJDoc2/Rust-NN-Web"]
-  },{
+  },
+  {
     "project": "The Transpiler Project",
     "language": ["C"],
-    "stack":["Flex","Bison","GNU Make","Parser"],
+    "stack": ["Flex", "Bison", "GNU Make", "Parser"],
     "description": "A compiler in C that compiles from custom syntax to C. Allows Basic C features, as well as some extra features, like let syntax, for var in range loops, basic support for classes etc.",
     "links": ["https://github.com/YJDoc2/The-Transpiler-Project"]
-  },{
+  },
+  {
     "project": "Kerberos Implementation",
-    "language": ["JavaScript","Python"],
-    "stack":["NodeJS"],
+    "language": ["JavaScript", "Python"],
+    "stack": ["NodeJS"],
     "description": "Implemented libraries in both Java script and python for implementing Kerberos Security Protocol.",
-    "links": ["https://github.com/YJDoc2/Kerberos-JS-Module","https://github.com/YJDoc2/Kerberos-Python-Library","https://github.com/YJDoc2/Kerberos-Examples"]
-  },{
+    "links": [
+      "https://github.com/YJDoc2/Kerberos-JS-Module",
+      "https://github.com/YJDoc2/Kerberos-Python-Library",
+      "https://github.com/YJDoc2/Kerberos-Examples"
+    ]
+  },
+  {
     "project": "Implementation of Threads",
-    "language": ["C","Assembly"],
-    "stack":["GNU Make","OS"],
+    "language": ["C", "Assembly"],
+    "stack": ["GNU Make", "OS"],
     "description": "Implemented support for threading in an existing Kernel, as well as created an API for creation and waiting on threads in c programs, along with implementation of various scheduling algorithms.",
     "links": ["https://github.com/YJDoc2/OS-Project"]
-  },{
+  },
+  {
     "project": "CodeBook",
-    "language": ["Python","HTML","JavaScript"],
-    "stack":["Flask"],
+    "language": ["Python", "HTML", "JavaScript"],
+    "stack": ["Flask"],
     "description": "A website similar to Facebook for coding problems sharing. One can create and share coding problems, follow other users, and solve problems. Compiling, Running, and evaluation of submitted code is done in same Backend.",
     "links": ["https://github.com/YJDoc2/CodeBook"]
-  },{
+  },
+  {
     "project": "FileStore",
-    "language": ["JavaScript","HTML"],
-    "stack":["NodeJS","MongoDB","React"],
+    "language": ["JavaScript", "HTML"],
+    "stack": ["NodeJS", "MongoDB", "React"],
     "description": "This is a website functioning similar to google drive, where users can store files privately, as well as create 'collections' which are public. This can also display some types of files in-browser. ",
     "links": ["https://github.com/YJDoc2/FileStore-Web-Project"]
-  },{
+  },
+  {
     "project": "Particle Simulator",
     "language": ["C++"],
-    "stack":["GNU Make"],
+    "stack": ["GNU Make"],
     "description": "A C++ program using OpenGL that simulates particles and fields as specified in input file, supports Gravitation and electromagnetism, or both. Shows paths of particles if specified in input file.",
     "links": ["https://github.com/YJDoc2/Particle-Simulator"]
-  },{
+  },
+  {
     "project": "Library Management System",
-    "language": ["Java","SQL"],
-    "stack":["Swing"],
+    "language": ["Java", "SQL"],
+    "stack": ["Swing"],
     "description": "A GUI based Library Management System in Java, using SQL Database.",
     "links": ["https://github.com/YJDoc2/Library-Manager-project"]
-  },{
+  },
+  {
     "project": "Equation Parser and solver",
     "language": ["C"],
-    "stack":["Parser"],
+    "stack": ["Parser"],
     "description": "An Equation Parser, and evaluator having ability to store and use variables and inbuilt constants using C. Also supports Solving polynomial equations for real roots, and finding factors of polynomial equations.",
     "links": ["https://github.com/YJDoc2/EquationParser"]
-  },{
+  },
+  {
     "project": "Interpreter for Equation Parser",
-    "language": ["C","C++"],
-    "stack":["Parser","Interpreter"],
+    "language": ["C", "C++"],
+    "stack": ["Parser", "Interpreter"],
     "description": "Interpreter for Equation Parser using C++.",
     "links": ["https://github.com/YJDoc2/Equation-Parser-Interpreter"]
   }

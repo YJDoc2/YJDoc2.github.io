@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope, faArrowUp } from "@fortawesome/free-solid-svg-icons"
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
 
 import { Link } from "react-scroll"
 
@@ -59,16 +59,6 @@ export default class Footer extends Component {
                         alt="github link"
                       >
                         <FontAwesomeIcon icon={faGithub} />
-                      </a>
-                    </li>
-                    <li className="list-inline-item mr-4">
-                      <a
-                        href="https://www.linkedin.com/in/yashodhan-joshi-b3172b19a/"
-                        target="_blank"
-                        rel="noreferrer"
-                        alt="linkedin link"
-                      >
-                        <FontAwesomeIcon icon={faLinkedin} />
                       </a>
                     </li>
                   </ul>

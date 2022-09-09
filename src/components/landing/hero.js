@@ -19,7 +19,7 @@ export default function Hero() {
                   👋
                 </span>
               </h1>
-              <h1>Hello, I'm Yashodhan Joshi</h1>
+              <h1>Hello, I'm Yashodhan</h1>
               <p>
                 I am Learning about computers,currently interested in Operating
                 Systems and System Programming.
@@ -57,18 +57,6 @@ export default function Hero() {
                   </div>
 
                   <h3 className="card-title">@YJDoc2</h3>
-                  <h4>
-                    <span
-                      className="mr-1"
-                      role="img"
-                      aria-label="pin"
-                      alt="pin emoji"
-                    >
-                      📍
-                    </span>
-                    India
-                    <br />
-                  </h4>
                   <p className="card-text">
                     Curious Student Interested in
                     <br />

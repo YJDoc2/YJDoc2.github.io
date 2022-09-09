@@ -1,8 +1,8 @@
 [
-    {
-        "db":"MongoDB"
-    },
-    {
-        "db":"MySQL"
-    }
+  {
+    "db": "MongoDB"
+  },
+  {
+    "db": "MySQL"
+  }
 ]

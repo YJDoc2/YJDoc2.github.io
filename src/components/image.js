@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 const Image = ({ fileName, alt, className }) => {
   const { allImageSharp } = useStaticQuery(graphql`
@@ -9,19 +9,22 @@ const Image = ({ fileName, alt, className }) => {
         nodes {
           fluid(maxWidth: 500) {
             originalName
-            ...GatsbyImageSharpFluid
           }
+          gatsbyImageData
         }
       }
     }
   `)
 
   const fluid = allImageSharp.nodes.find(n => n.fluid.originalName === fileName)
-    .fluid
 
   return (
     <figure>
-      <Img fluid={fluid} alt={alt} className={className} />
+      <GatsbyImage
+        image={fluid.gatsbyImageData}
+        alt={alt}
+        className={className}
+      />
     </figure>
   )
 }

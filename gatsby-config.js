@@ -8,7 +8,7 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `YJDoc2`,
-    description: `A minimalistic resume style Gatsby portfolio.`,
+    description: `A minimalistic resume style portfolio of YJDoc2`,
     author: `@YJDoc2`,
   },
   plugins: [
@@ -42,6 +42,7 @@ module.exports = {
         path: `${__dirname}/src/data`,
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-plugin-dark-mode`,
     `gatsby-plugin-sass`,
     // this (optional) plugin enables Progressive Web App + Offline functionality

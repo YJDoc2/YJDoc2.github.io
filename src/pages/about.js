@@ -1,12 +1,12 @@
 import React from "react"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Physics from "../components/physics"
 import Layout from "../components/layout"
 import { Link } from "gatsby"
 
 const AboutPage = () => (
   <Layout>
-    <SEO title="About" />
+    <Seo title="About" />
     <section className="about">
       <div className="container">
         {/* + Title */}
@@ -33,10 +33,10 @@ const AboutPage = () => (
                 </div>
 
                 <div className="card-text">
-                  I am Yashodhan Joshi, a curious student currently learning
-                  Computer engineering. I hope to do something that will connect
-                  both, my knowledge of computers and my love of physics. I am
-                  am particularly fascinated by Operating Systems, Compilers and
+                  I am Yashodhan, a curious student currently learning Computer
+                  engineering. I hope to do something that will connect both, my
+                  knowledge of computers and my love of physics. I am am
+                  particularly fascinated by Operating Systems, Compilers and
                   Theory of General Relativity.
                 </div>
               </div>

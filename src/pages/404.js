@@ -1,5 +1,5 @@
 import React from "react"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 import PhysicsBits from "../components/physics"
 import Layout from "../components/layout"
@@ -7,7 +7,7 @@ import blankcanvas from "../images/blankcanvas.svg"
 
 const Page404 = () => (
   <Layout>
-    <SEO title="Page Not Found" />
+    <Seo title="Page Not Found" />
     <section className="page404">
       <div className="container">
         <div className="row row-404 mt-4 float-right">

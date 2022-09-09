@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Physics from "../components/physics"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -64,7 +64,7 @@ export default class ProjectsPage extends Component {
     let data = this.filterProjects(this.props.data.allProjectsJson.nodes)
     return (
       <Layout>
-        <SEO title="Projects" />
+        <Seo title="Projects" />
         <section className="content">
           <div className="container">
             <div className="subsection">
@@ -126,9 +126,11 @@ export default class ProjectsPage extends Component {
                       </h4>
                       <h4>
                         <FontAwesomeIcon icon={faCode} className="mr-2" />
-                        {node.stack.reduce((a, b) => {
-                          return a + " , " + b
-                        })}
+                        {node.stack.length
+                          ? node.stack.reduce((a, b) => {
+                              return a + " , " + b
+                            })
+                          : ""}
                       </h4>
                     </div>
                     <div className="card-text">

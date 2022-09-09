@@ -1,5 +1,5 @@
 import React from "react"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 import Layout from "../components/layout"
 import Links from "../components/links"
@@ -7,7 +7,7 @@ import contact from "../images/contact.svg"
 
 const ContactPage = () => (
   <Layout>
-    <SEO title="Contact" />
+    <Seo title="Contact" />
     <section className="contact">
       <div className="container">
         <div className="row mt-4">

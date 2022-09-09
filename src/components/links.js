@@ -2,7 +2,7 @@ import React from "react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
-import { faGithub, faLinkedin, faDev } from "@fortawesome/free-brands-svg-icons"
+import { faGithub, faDev } from "@fortawesome/free-brands-svg-icons"
 
 export default function Links() {
   return (
@@ -35,16 +35,6 @@ export default function Links() {
           alt="dev to link"
         >
           <FontAwesomeIcon icon={faDev} />
-        </a>
-      </li>
-      <li className="list-group-item">
-        <a
-          href="https://www.linkedin.com/in/yashodhan-joshi-b3172b19a/"
-          target="_blank"
-          rel="noreferrer"
-          alt="linkedin link"
-        >
-          <FontAwesomeIcon icon={faLinkedin} />
         </a>
       </li>
     </ul>
