@@ -5,8 +5,8 @@
     "stack": [],
     "description": "A Simple web app to generate word and grammar prompts for japanese learners.",
     "links": [
-      "https://github.com/YJDoc2/pcb-rs/",
-      "https://github.com/YJDoc2/jpn-prompt-generator"
+      "https://github.com/YJDoc2/jpn-prompt-generator",
+      "https://yjdoc2.github.io/jpn-prompt-generator"
     ]
   },
   {
