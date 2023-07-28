@@ -26,6 +26,7 @@
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
+	<br />
 	<slot />
 	<svelte:fragment slot="footer">
 		<div class="flex mx-2">
