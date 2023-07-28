@@ -41,7 +41,7 @@
 		<p>
 			You can find more about me on the <a href="/about"> About </a> page. As you will find out
 			there, I am interested in hearing about new, interesting ideas. So if you want to talk about
-			that, or anything else, feel free to <a href="/contact"> Contact Me</a>
+			that, or anything else, feel free to <a href="/contact"> Contact Me</a>.
 		</p>
 		<br />
 		<hr class="mx-20" />
