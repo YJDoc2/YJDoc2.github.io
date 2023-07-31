@@ -32,12 +32,12 @@
 	on my <a href="https://github.com/YJDoc2?tab=repositories" target="_blank"> github</a>.
 </p>
 <p class="text-base text-center mt-2">( You can also filter projects by selecting tags below )</p>
-<div class="w-1/2 grid grid-cols-9 gap-2 mx-auto my-5">
+<div class="w-1/2 grid xl:grid-cols-9 grid-cols-3 gap-2 mx-auto my-5">
 	{#each allTags as tag}
 		<span
 			class="chip {selectedTags.has(tag)
 				? 'variant-filled-secondary'
-				: 'variant-ringed-secondary'} w-25 text-base"
+				: 'variant-ringed-secondary'} md:text-base text-xs"
 			on:click={() => {
 				toggleTag(tag);
 			}}
