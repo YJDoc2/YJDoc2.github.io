@@ -1,0 +1,17 @@
+body {
+  font-size: 2rem;
+  margin: 15rem;
+}
+
+main {
+  line-height: 1.5;
+  text-align: justify;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}

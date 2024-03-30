@@ -1,0 +1,55 @@
+:root {
+  --hyperlink-color: blue;
+  --hyperlink-lightness: color-mix(in srgb, var(--hyperlink-color) 50%, white);
+}
+
+[data-theme="light"] {
+  background-color: #ffffff;
+}
+
+[data-theme="dark"] {
+  background-color: #111111;
+  color: #d6d6d6;
+  --hyperlink-color: darkred;
+  --hyperlink-lightness: color-mix(in srgb, var(--hyperlink-color) 80%, white);
+}
+
+a[href]:where(
+  /* exclude hash only links */
+  [href^="#"],
+  /* exclude relative but not double slash only links */
+  [href^="/"]:not([href^="//"]),
+  /* domains to exclude */
+  [href*="//stackoverflow.com"],
+  /* subdomains to exclude */
+  [href*="//meta.stackoverflow.com"],
+) {
+  color: var(--hyperlink-color);
+}
+
+a:hover {
+  color: var(--hyperlink-lightness);
+}
+
+#theme-toggle {
+  opacity: 0;
+}
+
+#theme-toggle:checked + label {
+  border: solid 2px;
+  border-color: white;
+  border-radius: 20%;
+  width: 30px;
+  height: 30px;
+  fill: yellow;
+  content: url("./sun.svg");
+}
+
+#theme-toggle:not(:checked) + label {
+  border: solid 2px;
+  border-radius: 20%;
+  width: 30px;
+  height: 30px;
+  fill: white;
+  content: url("./moon.svg");
+}

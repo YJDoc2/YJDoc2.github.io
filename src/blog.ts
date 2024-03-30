@@ -23,6 +23,11 @@ export type ParsedBlogpost = {
   config: BlogpostConfig;
 };
 
+export type CompiledBlogpost = {
+  content: string;
+  toc: string;
+};
+
 export function parseBlogFiles(
   files: Array<string>,
 ): Array<ParsedBlogpost> {
@@ -52,16 +57,23 @@ export function parseBlogFiles(
   return ret;
 }
 
-export function compileBlogpost(post: ParsedBlogpost): string {
+export function compileBlogpost(post: ParsedBlogpost): CompiledBlogpost {
   const ast = post.ast;
   const slugger = rehypeSlug();
   const externLinks = rehypeExternalLinks();
   const _toc = toc(ast);
-  ast.children.unshift(_toc.map);
   const hast = toHast(ast);
   slugger(hast);
   externLinks(hast);
-  return unified()
+
+  const content = unified()
     .use(rehypeStringify)
     .stringify(hast);
+  const renderedToc = unified().use(rehypeStringify).stringify(
+    toHast(_toc.map),
+  );
+  return {
+    content,
+    toc: renderedToc,
+  };
 }

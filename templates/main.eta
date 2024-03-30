@@ -4,12 +4,27 @@
     <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/modern-normalize.css" />
+    <link rel="stylesheet" href="/root.css" />
+    <link rel="stylesheet" href="/blog.css" />
   </head>
-  <body>
-  
+  <body data-theme="light">
+    <input type="checkbox" id="theme-toggle" />
+    <label for="theme-toggle"></label>
+    <p class="toc">
+      <%= it.toc %>
+    </p>
     <main>
        <%= it.post %>
     </main>
+    <script>
+      // a very quick way to set the selected theme, so we don't get the annoying fickering 
+      let selectedTheme = localStorage.getItem("theme") || 'light';
+      if(!['light','dark'].includes(selectedTheme)){
+        selectedTheme = 'light';
+      }
+      document.querySelector('body').setAttribute('data-theme',selectedTheme);
+    </script>
+    <script src="/root.js" />
   </body>
 </html>

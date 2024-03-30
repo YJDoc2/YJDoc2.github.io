@@ -6,6 +6,9 @@ export function renderBlogpost(post: ParsedBlogpost): string {
   const eta = new Eta({ views: templateRoot, autoEscape: false });
 
   const postContent = compileBlogpost(post);
-  const res = eta.render("main.eta", { post: postContent });
+  const res = eta.render("main.eta", {
+    post: postContent.content,
+    toc: postContent.toc,
+  });
   return res;
 }
