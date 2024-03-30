@@ -9,6 +9,7 @@ export function renderBlogpost(post: ParsedBlogpost): string {
   const res = eta.render("main.eta", {
     post: postContent.content,
     toc: postContent.toc,
+    title: post.config.title,
   });
   return res;
 }

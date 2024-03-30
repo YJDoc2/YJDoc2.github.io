@@ -767,6 +767,7 @@
     }
   },
   "redirects": {
+    "https://deno.land/x/slug/mod.ts": "https://deno.land/x/slug@v1.1.0/mod.ts",
     "https://esm.sh/mdast-util-to-hast@13": "https://esm.sh/mdast-util-to-hast@13.1.0",
     "https://esm.sh/mdast-util-toc@7": "https://esm.sh/mdast-util-toc@7.0.0",
     "https://esm.sh/rehype-autolink-headings@7": "https://esm.sh/rehype-autolink-headings@7.1.0",
@@ -924,6 +925,8 @@
     "https://deno.land/x/eta@v3.4.0/src/render.ts": "be7d45bf0ebf2769422908c1f353eeaff647ed5a7dd05531ccd571848152dc39",
     "https://deno.land/x/eta@v3.4.0/src/storage.ts": "c40bd31cdd6f1218c86f70067282709e2f2c7fa7eea67547be950e1ed5d4bd4c",
     "https://deno.land/x/eta@v3.4.0/src/utils.ts": "1994c8d228195558fb6785fb00a97cf21a457df598a6ab1945170f7a4b7f00d9",
+    "https://deno.land/x/slug@v1.1.0/lib/locale.ts": "824401e31650704aec7595750e1898495c7f81f848c3b5150adb1a6a609a1741",
+    "https://deno.land/x/slug@v1.1.0/mod.ts": "b0d86966a651871d610f81062c865e40fca1c7932584c7bf687e3d432825cfd6",
     "https://esm.sh/mdast-util-to-hast@13.1.0": "3a712fec5d7f4696ec135556925c8c2f7480b21dc39bd96077550d06220d2ba8",
     "https://esm.sh/mdast-util-toc@7.0.0": "b4628c5babae460fa3452c52fe2f5aa810b2790dd74a6606784febbe0cad6ce6",
     "https://esm.sh/rehype-autolink-headings@7.1.0": "66d11d07f8e5cc477b261c80652bf3004706408c6016712a160cc83149a2c04a",

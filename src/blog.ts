@@ -9,12 +9,15 @@ import rehypeSlug from "https://esm.sh/rehype-slug@6";
 import rehypeExternalLinks from "https://esm.sh/rehype-external-links@3";
 
 import * as yaml from "https://deno.land/std@0.221.0/yaml/mod.ts";
+import { slug } from "https://deno.land/x/slug/mod.ts";
 
 import { ParsedAST } from "./externalTypes.ts";
 
 export type BlogpostConfig = {
   draft?: boolean;
   series?: string;
+  title: string;
+  slug: string;
 };
 
 export type ParsedBlogpost = {
@@ -52,6 +55,14 @@ export function parseBlogFiles(
     }
     const value = frontmatter.value || "";
     const parsedFrontmatter = yaml.parse(value) as BlogpostConfig;
+    if (!parsedFrontmatter.title) {
+      throw new Error(
+        `title is required for all blogposts, missing in file ${file}`,
+      );
+    }
+    if (!parsedFrontmatter.slug) {
+      parsedFrontmatter.slug = slug(parsedFrontmatter.title);
+    }
     ret.push({ filepath: file, ast: processed, config: parsedFrontmatter });
   }
   return ret;

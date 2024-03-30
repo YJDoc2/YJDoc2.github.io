@@ -1,6 +1,7 @@
 :root {
   --hyperlink-color: blue;
-  --hyperlink-lightness: color-mix(in srgb, var(--hyperlink-color) 50%, white);
+  --hyperlink-light: color-mix(in srgb, var(--hyperlink-color) 50%, white);
+  --hyperlink-visited: color-mix(in srgb, var(--hyperlink-color) 50%, black);
 }
 
 [data-theme="light"] {
@@ -11,24 +12,25 @@
   background-color: #111111;
   color: #d6d6d6;
   --hyperlink-color: darkred;
-  --hyperlink-lightness: color-mix(in srgb, var(--hyperlink-color) 80%, white);
+  --hyperlink-light: color-mix(in srgb, var(--hyperlink-color) 80%, white);
+  --hyperlink-visited: purple;
 }
 
-a[href]:where(
+a {
+  color: var(--hyperlink-color);
+}
+
+a[href]:not(:where(
   /* exclude hash only links */
   [href^="#"],
   /* exclude relative but not double slash only links */
   [href^="/"]:not([href^="//"]),
-  /* domains to exclude */
-  [href*="//stackoverflow.com"],
-  /* subdomains to exclude */
-  [href*="//meta.stackoverflow.com"],
-) {
-  color: var(--hyperlink-color);
+)) {
+  color: var(--hyperlink-visited);
 }
 
 a:hover {
-  color: var(--hyperlink-lightness);
+  color: var(--hyperlink-light);
 }
 
 #theme-toggle {

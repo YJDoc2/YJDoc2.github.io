@@ -1,4 +1,3 @@
-import { toc } from "https://esm.sh/mdast-util-toc@7";
 import { getContentFiles } from "./utils.ts";
 import { renderBlogpost } from "./render.ts";
 import { parseBlogFiles } from "./blog.ts";
@@ -11,15 +10,24 @@ const buildDir = rootPath + "../build";
 
 try {
   Deno.statSync(buildDir);
-} catch (e) {
+  for (const file of Deno.readDirSync(buildDir)) {
+    Deno.removeSync(buildDir + "/" + file.name, { recursive: true });
+  }
+} catch (_e) {
   Deno.mkdirSync(buildDir);
 }
 
+Deno.mkdirSync(buildDir + "/blogs");
+
 for (const post of posts) {
   const renderedPost = renderBlogpost(post);
-  Deno.writeTextFileSync(buildDir + "/post.html", renderedPost, {
-    create: true,
-  });
+  Deno.writeTextFileSync(
+    buildDir + `/blogs/${post.config.slug}.html`,
+    renderedPost,
+    {
+      create: true,
+    },
+  );
 }
 for (const file of Deno.readDirSync(rootPath + "../static")) {
   if (file.isFile) {

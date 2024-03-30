@@ -2,6 +2,7 @@
 draft: true
 logrocket_post: true
 series: "fake series"
+title: Blog post for Initial testing
 ---
 
 
