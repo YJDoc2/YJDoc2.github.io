@@ -7,17 +7,23 @@ title: Make a Combined Library and Binary Project in Rust
 In this article, we will take a look at how to create a combined library-binary project in Rust.
 
 In Rust, Cargo can create two types of projects :
+
 * **library** projects which usually contains core logic and functions that together make some kind of library, and is not compiled to a runnable program as it does not have main function, instead it is compiled to some kind of shared library file. These are used by other runnable programs and libraries for internal use.
 These are created by running 
-```
+
+
+```sh
 # For creating a new dir
 cargo new --lib my_project
 # For creating in current dir
 cargo init --lib
 ```
+
 * **binary** projects which can be compiled to runnable program, which can be directly run, and faces users.
 These are created by running
-```
+
+
+```sh
 # For creating a new dir
 cargo new my_project
 # For creating in current dir

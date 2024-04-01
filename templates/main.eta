@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="/modern-normalize.css" />
     <link rel="stylesheet" href="/root.css" />
     <link rel="stylesheet" href="/blog.css" />
+    <link rel="stylesheet" href="/prism.css" />
   </head>
   <body data-theme="light">
     <input type="checkbox" id="theme-toggle" />
     <label for="theme-toggle"></label>
     <h1 class="title"><%= it.title %></h1>
-    <p class="toc">
+    <div class="toc">
       <%= it.toc %>
-    </p>
+    </div>
     <main>
        <%= it.post %>
     </main>

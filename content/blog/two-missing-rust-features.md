@@ -49,9 +49,9 @@ Because of such nice support, there are quite a few libraries which build on top
 consider the following which uses anyhow crate :
 ```rust
 ...
-let result1 = function1().context('function 1 errored')?;
-let result2 = function2(param1).with_context(|| format!('function 2 errored with param {param1}'))?;
-let result3 = result1.update(result2).context('update with result2 failed')?;
+let result1 = function1().context("function 1 errored")?;
+let result2 = function2(param1).with_context(|| format!("function 2 errored with param {param1}"))?;
+let result3 = result1.update(result2).context("update with result2 failed")?;
 ...
 ```
 

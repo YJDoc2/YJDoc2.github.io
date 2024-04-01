@@ -8,10 +8,10 @@ main {
   text-align: justify;
 }
 
-a {
-  text-decoration: none;
+.toc > ul {
+  list-style: none;
 }
 
 ul {
-  list-style: none;
+  list-style: "- ";
 }

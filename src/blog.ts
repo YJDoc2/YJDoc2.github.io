@@ -12,6 +12,7 @@ import * as yaml from "https://deno.land/std@0.221.0/yaml/mod.ts";
 import { slug } from "https://deno.land/x/slug/mod.ts";
 
 import { ParsedAST } from "./externalTypes.ts";
+import { highlight } from "./highlight.ts";
 
 export type BlogpostConfig = {
   draft?: boolean;
@@ -74,6 +75,7 @@ export function compileBlogpost(post: ParsedBlogpost): CompiledBlogpost {
   const externLinks = rehypeExternalLinks();
   const _toc = toc(ast);
   const hast = toHast(ast);
+  highlight(hast);
   slugger(hast);
   externLinks(hast);
 
