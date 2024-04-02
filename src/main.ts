@@ -1,6 +1,11 @@
 import { getContentFiles } from "./utils.ts";
-import { renderBlogIndexPage, renderBlogpost } from "./render.ts";
+import {
+  renderBlogIndexPage,
+  renderBlogpost,
+  renderTagIndexPage,
+} from "./render.ts";
 import { parseBlogFiles } from "./blog.ts";
+import { renderTagPage } from "./render.ts";
 
 const contentFiles = getContentFiles();
 const posts = parseBlogFiles(contentFiles.blog);
@@ -18,6 +23,7 @@ try {
 }
 
 Deno.mkdirSync(buildDir + "/blogs");
+Deno.mkdirSync(buildDir + "/blogs/tags");
 
 for (const post of posts) {
   const renderedPost = renderBlogpost(post);
@@ -33,6 +39,11 @@ const blogIndexPage = renderBlogIndexPage();
 Deno.writeTextFileSync(buildDir + "/blogs/index.html", blogIndexPage, {
   create: true,
 });
+const tagIndexPage = renderTagIndexPage();
+Deno.writeTextFileSync(buildDir + "/blogs/tags/index.html", tagIndexPage, {
+  create: true,
+});
+renderTagPage(buildDir + "/blogs/tags");
 for (const file of Deno.readDirSync(rootPath + "../static")) {
   if (file.isFile) {
     Deno.copyFileSync(

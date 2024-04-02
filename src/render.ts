@@ -1,6 +1,8 @@
 import { Eta } from "https://deno.land/x/eta@v3.4.0/src/index.ts";
+import { capitalize } from "./utils.ts";
 import { compileBlogpost, ParsedBlogpost } from "./blog.ts";
-import { getAllblogposts } from "./db.ts";
+import { getAllblogposts, getAllTags } from "./db.ts";
+import { getTagPostMap } from "./db.ts";
 
 export function renderBlogpost(post: ParsedBlogpost): string {
   const templateRoot = import.meta.dirname + "/../templates";
@@ -18,7 +20,7 @@ export function renderBlogpost(post: ParsedBlogpost): string {
 export function renderBlogIndexPage(): string {
   const posts = getAllblogposts();
   const templateRoot = import.meta.dirname + "/../templates";
-  const eta = new Eta({ views: templateRoot, autoEscape: false });
+  const eta = new Eta({ views: templateRoot, autoEscape: true });
 
   const postRenderData: Array<{ date: string; posts: Array<ParsedBlogpost> }> =
     [];
@@ -51,4 +53,28 @@ export function renderBlogIndexPage(): string {
     postMap: postRenderData,
   });
   return res;
+}
+
+export function renderTagIndexPage(): string {
+  const allTags = getAllTags().map((t) => capitalize(t));
+  const templateRoot = import.meta.dirname + "/../templates";
+  const eta = new Eta({ views: templateRoot, autoEscape: true });
+  const res = eta.render("tagIndex.eta", {
+    title: "Tags",
+    tags: allTags,
+  });
+  return res;
+}
+
+export function renderTagPage(tagRootDir: string): string {
+  const tagMap = getTagPostMap();
+  const templateRoot = import.meta.dirname + "/../templates";
+  const eta = new Eta({ views: templateRoot, autoEscape: true });
+  for (const tag of Object.keys(tagMap)) {
+    const res = eta.render("tag.eta", {
+      tagName: capitalize(tag),
+      posts: tagMap[tag],
+    });
+    Deno.writeTextFileSync(tagRootDir + `/${tag}.html`, res, { create: true });
+  }
 }

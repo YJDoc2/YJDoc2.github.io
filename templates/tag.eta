@@ -1,0 +1,8 @@
+<% layout("./main.eta") %>
+
+<h1><a id="tags-title" href="/blogs/tags/">Tags</a> / <%= it.tagName %></h1>
+<ul id="tags-ul">
+<% it.posts.forEach(function(post) { %>
+  <li> <a href="/blogs/<%= post.config.slug %>.html"> <%= post.config.title %> </a> </li>
+<% }) %>
+</ul>

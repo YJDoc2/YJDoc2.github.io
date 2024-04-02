@@ -1,0 +1,7 @@
+#tags-ul > li {
+  margin-top: 0.5rem;
+}
+
+#tags-title {
+  color: var(--text-color);
+}

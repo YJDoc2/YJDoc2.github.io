@@ -1,0 +1,8 @@
+<% layout("./main.eta") %>
+
+<h1>Tags</h1>
+<ul id="tags-ul">
+<% it.tags.forEach(function(tag) { %>
+  <li> <a href="/blogs/tags/<%= tag.toLowerCase() %>.html"> <%= tag %> </a> </li>
+<% }) %>
+</ul>

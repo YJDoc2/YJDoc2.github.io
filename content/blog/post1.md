@@ -3,6 +3,7 @@ logrocket_post: true
 series: "fake series"
 title: Blog post for Initial testing
 publishedDate: 25 Jun 2023
+tags: [js,rust]
 ---
 
 
