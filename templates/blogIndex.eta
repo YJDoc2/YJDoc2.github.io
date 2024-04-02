@@ -3,7 +3,7 @@
 <% it.postMap.forEach(function(data) { %>
   <% const dateId = data.date.toLowerCase().replace(" ","_")%>
   <h2 class="blog-index-date-headers" id=<%= dateId%>> <a href="#<%= dateId%>"> <%= data.date %> </a> </h2>
-  <ul>
+  <ul class="blog-index-ul" >
   <% data.posts.forEach(function(post){ %>
   <li> <a href="/blogs/<%= post.config.slug %>.html"> <%= post.config.title %> </a> </li>
   <% }) %>
