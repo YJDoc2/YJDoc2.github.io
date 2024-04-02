@@ -13,10 +13,13 @@ import { slug } from "https://deno.land/x/slug/mod.ts";
 
 import { ParsedAST } from "./externalTypes.ts";
 import { highlight } from "./highlight.ts";
+import { insertPost } from "./db.ts";
 
 export type BlogpostConfig = {
   draft?: boolean;
   series?: string;
+  tags: Array<string>;
+  publishedDate?: Date;
   title: string;
   slug: string;
 };
@@ -64,7 +67,20 @@ export function parseBlogFiles(
     if (!parsedFrontmatter.slug) {
       parsedFrontmatter.slug = slug(parsedFrontmatter.title);
     }
-    ret.push({ filepath: file, ast: processed, config: parsedFrontmatter });
+    if (!parsedFrontmatter.tags) {
+      parsedFrontmatter.tags = [];
+    }
+    if (!parsedFrontmatter.draft) {
+      if (!parsedFrontmatter.publishedDate) {
+        throw new Error(`missing published date on file ${file}`);
+      }
+      parsedFrontmatter.publishedDate = new Date(
+        parsedFrontmatter.publishedDate,
+      );
+    }
+    const post = { filepath: file, ast: processed, config: parsedFrontmatter };
+    ret.push(post);
+    insertPost(post);
   }
   return ret;
 }

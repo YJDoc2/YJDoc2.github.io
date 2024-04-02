@@ -2,15 +2,18 @@
   --hyperlink-color: blue;
   --hyperlink-light: color-mix(in srgb, var(--hyperlink-color) 50%, white);
   --hyperlink-visited: color-mix(in srgb, var(--hyperlink-color) 50%, black);
+  --text-color: black;
 }
 
 [data-theme="light"] {
   background-color: #ffffff;
+  --text-color: black;
 }
 
 [data-theme="dark"] {
   background-color: #111111;
-  color: #d6d6d6;
+  --text-color: #d6d6d6;
+  color: var(--text-color);
   --hyperlink-color: darkred;
   --hyperlink-light: color-mix(in srgb, var(--hyperlink-color) 80%, white);
   --hyperlink-visited: purple;

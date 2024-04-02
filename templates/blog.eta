@@ -1,0 +1,11 @@
+<% layout("./main.eta") %>
+
+<h1 class="title"><%= it.title %></h1>
+
+<div class="toc">
+  <%= it.toc %>
+</div>
+<main>
+   <%= it.post %>
+</main>
+ 

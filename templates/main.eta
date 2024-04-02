@@ -12,14 +12,8 @@
   <body data-theme="light">
     <input type="checkbox" id="theme-toggle" />
     <label for="theme-toggle"></label>
-    <h1 class="title"><%= it.title %></h1>
-    <div class="toc">
-      <%= it.toc %>
-    </div>
-    <main>
-       <%= it.post %>
-    </main>
-    <script>
+    <%~ it.body %>
+   <script>
       // a very quick way to set the selected theme, so we don't get the annoying fickering 
       let selectedTheme = localStorage.getItem("theme") || 'light';
       if(!['light','dark'].includes(selectedTheme)){

@@ -1,7 +1,7 @@
 ---
 draft: false
 title: Two Rust features that I miss in Other languages
-
+publishedDate: 01 Jan 2024
 ---
 
 Hello everyone!

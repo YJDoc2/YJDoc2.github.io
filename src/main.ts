@@ -1,5 +1,5 @@
 import { getContentFiles } from "./utils.ts";
-import { renderBlogpost } from "./render.ts";
+import { renderBlogIndexPage, renderBlogpost } from "./render.ts";
 import { parseBlogFiles } from "./blog.ts";
 
 const contentFiles = getContentFiles();
@@ -29,6 +29,10 @@ for (const post of posts) {
     },
   );
 }
+const blogIndexPage = renderBlogIndexPage();
+Deno.writeTextFileSync(buildDir + "/blogs/index.html", blogIndexPage, {
+  create: true,
+});
 for (const file of Deno.readDirSync(rootPath + "../static")) {
   if (file.isFile) {
     Deno.copyFileSync(
