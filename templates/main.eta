@@ -22,6 +22,6 @@
       }
       document.querySelector('body').setAttribute('data-theme',selectedTheme);
     </script>
-    <script src="/root.js" />
+    <script src="/root.js"></script>
   </body>
 </html>

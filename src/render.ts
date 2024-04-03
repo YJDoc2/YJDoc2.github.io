@@ -4,9 +4,33 @@ import { compileBlogpost, ParsedBlogpost } from "./blog.ts";
 import { getAllblogposts, getAllTags } from "./db.ts";
 import { getTagPostMap } from "./db.ts";
 
-export function renderBlogpost(post: ParsedBlogpost): string {
-  const templateRoot = import.meta.dirname + "/../templates";
-  const eta = new Eta({ views: templateRoot, autoEscape: false });
+const TEMPLATE_DIR = import.meta.dirname + "/../templates";
+
+export function renderBlogSections(buildRoot: string) {
+  const posts = getAllblogposts();
+  for (const post of posts) {
+    const renderedPost = renderBlogpost(post);
+    Deno.writeTextFileSync(
+      buildRoot + `/blogs/${post.config.slug}.html`,
+      renderedPost,
+      {
+        create: true,
+      },
+    );
+  }
+  const blogIndexPage = renderBlogIndexPage();
+  Deno.writeTextFileSync(buildRoot + "/blogs/index.html", blogIndexPage, {
+    create: true,
+  });
+  const tagIndexPage = renderTagIndexPage();
+  Deno.writeTextFileSync(buildRoot + "/blogs/tags/index.html", tagIndexPage, {
+    create: true,
+  });
+  renderTagPages(buildRoot + "/blogs/tags");
+}
+
+function renderBlogpost(post: ParsedBlogpost): string {
+  const eta = new Eta({ views: TEMPLATE_DIR, autoEscape: false });
 
   const postContent = compileBlogpost(post);
   const res = eta.render("blog.eta", {
@@ -18,10 +42,9 @@ export function renderBlogpost(post: ParsedBlogpost): string {
   return res;
 }
 
-export function renderBlogIndexPage(): string {
+function renderBlogIndexPage(): string {
   const posts = getAllblogposts();
-  const templateRoot = import.meta.dirname + "/../templates";
-  const eta = new Eta({ views: templateRoot, autoEscape: true });
+  const eta = new Eta({ views: TEMPLATE_DIR, autoEscape: true });
 
   const postRenderData: Array<{ date: string; posts: Array<ParsedBlogpost> }> =
     [];
@@ -56,10 +79,9 @@ export function renderBlogIndexPage(): string {
   return res;
 }
 
-export function renderTagIndexPage(): string {
+function renderTagIndexPage(): string {
   const allTags = getAllTags().map((t) => capitalize(t));
-  const templateRoot = import.meta.dirname + "/../templates";
-  const eta = new Eta({ views: templateRoot, autoEscape: true });
+  const eta = new Eta({ views: TEMPLATE_DIR, autoEscape: true });
   const res = eta.render("tagIndex.eta", {
     title: "Tags",
     tags: allTags,
@@ -67,10 +89,9 @@ export function renderTagIndexPage(): string {
   return res;
 }
 
-export function renderTagPage(tagRootDir: string): string {
+function renderTagPages(tagRootDir: string) {
   const tagMap = getTagPostMap();
-  const templateRoot = import.meta.dirname + "/../templates";
-  const eta = new Eta({ views: templateRoot, autoEscape: true });
+  const eta = new Eta({ views: TEMPLATE_DIR, autoEscape: true });
   for (const tag of Object.keys(tagMap)) {
     const res = eta.render("tag.eta", {
       title: `Tag : ${capitalize(tag)}`,
