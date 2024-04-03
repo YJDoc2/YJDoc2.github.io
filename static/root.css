@@ -3,16 +3,18 @@
   --hyperlink-light: color-mix(in srgb, var(--hyperlink-color) 50%, white);
   --hyperlink-visited: color-mix(in srgb, var(--hyperlink-color) 60%, black);
   --text-color: black;
+  --background-color: #e6e6e6;
 }
 
 [data-theme="light"] {
-  background-color: #e6e6e6;
+  background-color: var(--background-color);
   --text-color: black;
 }
 
 [data-theme="dark"] {
-  background-color: #191919;
+  --background-color: #191919;
   --text-color: #d6d6d6;
+  background-color: var(--background-color);
   color: var(--text-color);
   --hyperlink-color: MediumOrchid;
   --hyperlink-light: Violet;

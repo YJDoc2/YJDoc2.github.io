@@ -13,6 +13,7 @@ export function renderBlogpost(post: ParsedBlogpost): string {
     post: postContent.content,
     toc: postContent.toc,
     title: post.config.title,
+    tags: post.config.tags,
   });
   return res;
 }
@@ -72,6 +73,7 @@ export function renderTagPage(tagRootDir: string): string {
   const eta = new Eta({ views: templateRoot, autoEscape: true });
   for (const tag of Object.keys(tagMap)) {
     const res = eta.render("tag.eta", {
+      title: `Tag : ${capitalize(tag)}`,
       tagName: capitalize(tag),
       posts: tagMap[tag],
     });

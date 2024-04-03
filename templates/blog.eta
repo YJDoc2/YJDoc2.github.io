@@ -2,9 +2,18 @@
 
 <h1 class="title"><%= it.title %></h1>
 
+<div>
+Tags : 
+<% it.tags.forEach(function(tag) { %>
+<span class="tag"><a href="/blogs/tags/<%= tag%>.html">#<%= tag %></a></span>
+<% }) %>
+</div>
+
+
 <div class="toc">
   <%= it.toc %>
 </div>
+
 <main>
    <%= it.post %>
 </main>

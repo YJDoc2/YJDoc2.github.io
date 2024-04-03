@@ -28,3 +28,7 @@ ul {
   text-decoration: none;
   color: var(--text-color);
 }
+
+.tag {
+  margin: auto 0.1rem;
+}
