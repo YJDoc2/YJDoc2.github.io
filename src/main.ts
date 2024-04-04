@@ -9,8 +9,9 @@ const rootPath = import.meta.dirname + "/";
 const buildDir = rootPath + "../build";
 const blogsDir = buildDir + "/blogs";
 const tagsDir = buildDir + "/blogs/tags";
+const seriesDir = buildDir + "/blogs/series";
 
-const requiredDirs = [buildDir, blogsDir, tagsDir];
+const requiredDirs = [buildDir, blogsDir, tagsDir, seriesDir];
 
 for (const dir of requiredDirs) {
   try {

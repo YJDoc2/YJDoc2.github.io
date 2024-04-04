@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/blog.css" />
     <link rel="stylesheet" href="/prism.css" />
     <link rel="stylesheet" href="/tags.css" />
+    <link rel="stylesheet" href="/series.css" />
   </head>
   <body data-theme="light">
     <input type="checkbox" id="theme-toggle" />

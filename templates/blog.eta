@@ -9,6 +9,12 @@ Tags :
 <% }) %>
 </div>
 
+<% if(it.series){%>
+<div>
+<i>This post is part of series <a href="/blogs/series/<%=it.series_slug%>.html"><%= it.series %></a></i>.
+</div>
+<% } %>
+
 
 <div class="toc">
   <%= it.toc %>

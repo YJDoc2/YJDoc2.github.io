@@ -40,6 +40,29 @@ export function getDatePostMap(): { [key: string]: Array<ParsedBlogpost> } {
   return ret;
 }
 
+export function getAllSeries(): Array<string> {
+  const temp = new Set<string>();
+  for (const post of DB.posts) {
+    if (post.config.series) {
+      temp.add(post.config.series);
+    }
+  }
+  return Array.from(temp);
+}
+
+export function getSeriesPostMap(): { [key: string]: Array<ParsedBlogpost> } {
+  const ret: { [key: string]: Array<ParsedBlogpost> } = {};
+  for (const post of DB.posts) {
+    if (post.config.series) {
+      if (!ret[post.config.series]) {
+        ret[post.config.series] = [];
+      }
+      ret[post.config.series].push(post);
+    }
+  }
+  return ret;
+}
+
 export function insertPost(post: ParsedBlogpost) {
   DB.posts.push(post);
 }

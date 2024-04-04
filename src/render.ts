@@ -1,8 +1,10 @@
 import { Eta } from "https://deno.land/x/eta@v3.4.0/src/index.ts";
+import { slug } from "https://deno.land/x/slug/mod.ts";
+
 import { capitalize } from "./utils.ts";
 import { compileBlogpost, ParsedBlogpost } from "./blog.ts";
-import { getAllblogposts, getAllTags } from "./db.ts";
-import { getTagPostMap } from "./db.ts";
+import { getAllblogposts, getAllSeries, getAllTags } from "./db.ts";
+import { getSeriesPostMap, getTagPostMap } from "./db.ts";
 
 const TEMPLATE_DIR = import.meta.dirname + "/../templates";
 
@@ -26,7 +28,17 @@ export function renderBlogSections(buildRoot: string) {
   Deno.writeTextFileSync(buildRoot + "/blogs/tags/index.html", tagIndexPage, {
     create: true,
   });
+  const seriesIndexPage = renderSeriesIndexPage();
+  Deno.writeTextFileSync(
+    buildRoot + "/blogs/series/index.html",
+    seriesIndexPage,
+    {
+      create: true,
+    },
+  );
+
   renderTagPages(buildRoot + "/blogs/tags");
+  renderSeriesPages(buildRoot + "/blogs/series");
 }
 
 function renderBlogpost(post: ParsedBlogpost): string {
@@ -36,6 +48,8 @@ function renderBlogpost(post: ParsedBlogpost): string {
   const res = eta.render("blog.eta", {
     post: postContent.content,
     toc: postContent.toc,
+    series: post.config.series ?? null,
+    series_slug: post.config.series ? slug(post.config.series) : null,
     title: post.config.title,
     tags: post.config.tags,
   });
@@ -99,5 +113,37 @@ function renderTagPages(tagRootDir: string) {
       posts: tagMap[tag],
     });
     Deno.writeTextFileSync(tagRootDir + `/${tag}.html`, res, { create: true });
+  }
+}
+
+function renderSeriesIndexPage(): string {
+  const allSeries = getAllSeries().map((s) => {
+    return { name: s, slug: slug(s) };
+  });
+  const eta = new Eta({ views: TEMPLATE_DIR, autoEscape: true });
+  const res = eta.render("seriesIndex.eta", {
+    title: "Series",
+    series: allSeries,
+  });
+  return res;
+}
+
+function renderSeriesPages(seriesRootDir: string) {
+  const seriesMap = getSeriesPostMap();
+  const eta = new Eta({ views: TEMPLATE_DIR, autoEscape: true });
+  for (const series of Object.keys(seriesMap)) {
+    if (seriesMap[series].length === 1) {
+      console.warn(
+        `Series ${series} has only 1 post, please check for typo in the name`,
+      );
+    }
+    const res = eta.render("series.eta", {
+      title: `${capitalize(series)}`,
+      seriesName: capitalize(series),
+      posts: seriesMap[series],
+    });
+    Deno.writeTextFileSync(seriesRootDir + `/${slug(series)}.html`, res, {
+      create: true,
+    });
   }
 }

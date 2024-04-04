@@ -1,0 +1,7 @@
+#series-ul > li {
+  margin-top: 0.5rem;
+}
+
+#series-title {
+  color: var(--text-color);
+}

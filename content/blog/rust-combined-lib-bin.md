@@ -3,6 +3,7 @@ draft: false
 title: Make a Combined Library and Binary Project in Rust
 publishedDate: 01 April 2024
 tags: [rust,tutorial]
+series: Test series
 ---
 
 In this article, we will take a look at how to create a combined library-binary project in Rust.
