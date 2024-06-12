@@ -7,7 +7,7 @@ title: Hexo
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
+author: Yashodhan Joshi
 language: en
 timezone: ''
 
@@ -96,7 +96,10 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: ascent
+theme_config:
+  word_count: true
+  rss: /atom.xml
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
