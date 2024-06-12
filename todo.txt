@@ -1,0 +1,1 @@
+Separate yaml parsed config and final config in blog so ts has easier time, and we can cover more tests
