@@ -100,6 +100,9 @@ theme: ascent
 theme_config:
   word_count: true
   rss: /atom.xml
+  menu:
+    About: /about
+    Contact: /contact
 
 
 # Deployment
