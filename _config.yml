@@ -102,6 +102,7 @@ theme_config:
   rss: /atom.xml
   menu:
     About: /about
+    Showcase: /showcase
     Contact: /contact
 
 
