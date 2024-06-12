@@ -3,4 +3,13 @@ title: Homepage
 date: 2024-06-12 13:18:48
 ---
 
-Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
+Hello! Nice to see you here :)
+
+I am __Yashodhan__, a curious person interested in operating systems, systems-programming and reading. Apart from several projects and open source contributions, I also have professional experiance in the field of dev-ops and systems-engineering.
+
+You can check out more details about me on the {% url_for About about %} page, and find some of the projects I did on {% url_for Showcase showcase %} Page. List of my occasional blogs posts, which cover topics such as C, Rust and JS can be found in the {% url_for archives archives %}.
+
+
+I am open for new, interesting ideas and opportunities, feel free to {% url_for "reach out" contact %} to me.
+
+Hope you have a good time!
