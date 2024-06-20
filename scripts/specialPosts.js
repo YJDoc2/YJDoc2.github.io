@@ -1,7 +1,7 @@
 // This file is for specific types of posts that need
 // some special stuff injected in them.
 // For example, series posts should have a info abot series injected,
-// LogRocket posts should havea disclaimer injected etc.
+// LogRocket posts should have a disclaimer injected etc.
 
 
 // Inject 'this post is part of the series...' for series posts
@@ -54,7 +54,7 @@ hexo.extend.filter.register("before_post_render", function (data) {
   }
 
   data.content =
-    `_This post was originally posted on LogRocket blog. You can see it [here](${logrocketLink})._\n\n` +
+    `_This post was originally posted on the LogRocket blog. You can see it [here](${logrocketLink})._\n\n` +
     data.content;
 
   return data;

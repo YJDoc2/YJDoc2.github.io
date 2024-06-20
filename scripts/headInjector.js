@@ -7,7 +7,7 @@ hexo.extend.injector.register(
   "default",
 );
 
-// cannonical url for logrocket posts
+// canonical url for logrocket posts
 // we have to do it using after_render filter, because the head_end injector
 // does not have access to the frontmatter data, and thus we cannot get the url
 hexo.extend.filter.register("after_render:html", (str, data) => {
