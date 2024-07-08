@@ -127,8 +127,6 @@ And this concludes the first assembly file, compiled from empty C file.
  
 This was a long post, but I wanted to explain things in a bit detail.Even though I couldn't find explanation to all things, I had fun learning about the details that I did found, and hope you enjoyed this as well.
 
-Again,I'm learning this all as I write this, If you find any mistakes or have any suggestions and improvements, please let know in comments.
-
 Thank you!
 
 NOTE :
