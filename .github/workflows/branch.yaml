@@ -1,0 +1,36 @@
+name: Basic Checks
+
+on:
+  push:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+
+  typos-check:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 1
+    steps:
+      - uses: actions/checkout@v4
+      - name: typos-action
+        uses: crate-ci/typos@v1.14.12
+
+  build-test:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '21.x'
+      - name: Install hexo
+        run: npm install -g hexo-cli
+      - name: Install deps
+        run: npm ci
+      # This is not a perfect testing, but should show any major issues
+      - name: generate files
+        run: hexo clean && hexo generate
