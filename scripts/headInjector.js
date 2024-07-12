@@ -31,3 +31,16 @@ hexo.extend.filter.register("after_render:html", (str, data) => {
   );
   return injected;
 });
+
+// injector for goatcounter script
+hexo.extend.filter.register("after_render:html", (str) => {
+  const injected = str.replace(
+    "</body>",
+    `\n<!-- GoatCounter script inject -->
+<script data-goatcounter="https://yjdoc2.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+<!-- GoatCounter script inject end-->
+</body>`,
+  );
+  return injected;
+});
