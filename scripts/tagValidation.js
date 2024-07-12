@@ -1,4 +1,4 @@
-const validTags = ['rust','javascript','c','assembly','compiler','tutorial','mongodb'];
+const validTags = ['rust','javascript','c','assembly','compiler','tutorial','mongodb','wasm','svelte','container','docker'];
 
 hexo.extend.filter.register('before_post_render', function(data){
   if(data.tags?.data?.length > 0 &&data.tags.data[0].name){
