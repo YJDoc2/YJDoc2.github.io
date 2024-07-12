@@ -3,7 +3,13 @@
 // GNU  STP
 hexo.extend.injector.register(
   "head_end",
-  '<meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />',
+  '\n<meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />\n',
+  "default",
+);
+
+hexo.extend.injector.register(
+  "head_end",
+  '\n<meta name="google-site-verification" content="ooX1QlwallH8qImpa8euW0XstkSm9FOSEr9gwiNiPg8" />\n',
   "default",
 );
 
