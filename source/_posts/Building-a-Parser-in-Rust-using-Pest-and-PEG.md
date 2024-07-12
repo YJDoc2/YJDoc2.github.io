@@ -1,7 +1,7 @@
 ---
 title: Building a Parser in Rust using Pest and PEG
 date: 2023-02-01
-tags: [rust, compiler, tutoriall]
+tags: [rust, compiler, tutorial]
 logrocket: https://blog.logrocket.com/building-rust-parser-pest-peg/
 categories: logrocket
 ---

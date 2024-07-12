@@ -2,7 +2,7 @@ const validTags = ['rust','javascript','c','assembly','compiler','tutorial','mon
 
 hexo.extend.filter.register('before_post_render', function(data){
   if(data.tags?.data?.length > 0 &&data.tags.data[0].name){
-    const tags = data.tags.data[0].name.split(',');
+    const tags = data.tags.data.map((t)=>t.name);
     const src = data.source;
     for(const tag of tags){
       if (!validTags.includes(tag)){

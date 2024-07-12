@@ -1,6 +1,7 @@
 ---
 title: Contact Me
 date: 2024-06-12 16:46:18
+description: Ways to contact me!
 ---
 
 # Contact Me

@@ -1,6 +1,7 @@
 ---
 title: Project Showcase
 date: 2024-06-12 17:15:10
+description: Information about various projects I did - Youki, 8086 emulator, pcb-rs etc.
 ---
 
 # Project Showcase

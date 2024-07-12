@@ -105,6 +105,13 @@ theme_config:
     Showcase: /showcase
     Contact: /contact
 
+sitemap:
+  path: 
+    - sitemap.xml
+    - sitemap.txt
+  rel: true
+  tags: true
+  categories: true
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
