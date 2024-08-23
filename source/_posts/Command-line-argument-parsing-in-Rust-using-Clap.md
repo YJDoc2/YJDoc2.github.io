@@ -2,7 +2,7 @@
 title: Command line argument parsing in Rust using Clap
 date: 2022-04-19
 tags: [rust, tutorial, compiler]
-logrocket: https://blog.logrocket.com/command-line-argument-parsing-rust-using-clap/
+logrocket: https://blog.logrocket.com/using-clap-rust-command-line-argument-parsing/
 categories: logrocket
 ---
 
